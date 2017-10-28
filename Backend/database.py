@@ -6,4 +6,4 @@ for i in range(4,53,1):
     if sheet.cell(row=i, column=2).value != None:
         print(i, sheet.cell(row=i, column=2).value)
     else:
-        print("")
+        print(i, sheet.cell(row=i+1, column=2).value)
