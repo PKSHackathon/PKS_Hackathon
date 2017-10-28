@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href = "css/home.css">
+</head>
+<body>
+	<div class = "wrapper">
+		<nav class="navigation">
+        {% for event in all_events %}
+            <li><a href="/event/{{ event.id }}">{{ event.nazwa }}</a></li>
+        {% endfor %}
+
+
+	    </nav>
+	    <div class=content>
+
+
+
+
+
+	    </div>
+	</div>
+<script src="js/script.js"></script>
+</body>
+</html>
