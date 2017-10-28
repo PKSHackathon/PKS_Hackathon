@@ -2,5 +2,5 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.glowna, name='glowna'),
+    url(r'^', views.glowna, name='glowna'),
 ]
