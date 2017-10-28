@@ -1,11 +1,13 @@
 import openpyxl
-i = 0
+z = 0
 wb = openpyxl.load_workbook('baza.xlsx')
 wb.get_sheet_names()
-sheet = wb.get_sheet_by_name('Arkusz1')
-for i in range(4,53,1):
-    if sheet.cell(row=i, column=2).value != None:
-        print(i, sheet.cell(row=i, column=2).value)
+event = wb.get_sheet_by_name('Arkusz1')
+for i in range(4,54,1):
+    for z in range(2, 7, 1):
+        if event.cell(row=i, column=z).value:
+            print(event.cell(row=i, column=z).value)
+
     else:
-        i +=1
+        z += 1
 
