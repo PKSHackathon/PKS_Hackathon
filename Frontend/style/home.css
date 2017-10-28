@@ -13,12 +13,16 @@ background: url("tlo.png") no-repeat center center fixed;
   	color:white;
   	font-size:1.5em;
   	font-family: 'Raleway', sans-serif;
+
 }
 .wrapper{
 	
 	height:100%;
 	background-color:rgba(0, 0, 0, 0.8);
 	min-height:100vh;
+}
+.logo{
+	margin-bottom:2.5%;
 }
 .content-wrapper{
 	display:flex;
@@ -55,6 +59,13 @@ a:link{
  a{
 	text-decoration: none;
 	color:white;
+	transition: 0.3s all ease-in-out;
+}
+a{
+	transition: 0.3s all ease-in-out;
+}
+button:focus{
+	outline: 0;
 }
 .content{
 	width:100%;
@@ -70,9 +81,12 @@ a:link{
 	font-size:1em;
 	width:70%;
 	border:1 px solid white;
-	padding-bottom:3%;
+	user-select: none;
+	padding-bottom:1.5%;
 }
 .day-activities{
+	/*margin-top:5%;*/
+	margin:0;
 	padding:0;
 	display: flex;
 	justify-content: center;
@@ -81,7 +95,25 @@ a:link{
 }
 .day-name:hover {
 cursor:pointer;
-text-decoration: underline;
+
+}
+.day-name:after:hover
+{
+	content: '';
+      position:absolute;
+      bottom:0;
+      left: 30%;
+      right: 30%;
+      height: 2px;
+      background:red;
+      display:block;
+}
+.day-name{
+	font-size:1.3em;
+	border:none;
+	background-color: #f4f0d9;
+	border-radius:2px;
+	border:1px solid white;
 }
 .activity{
 	width:100%;
@@ -114,6 +146,9 @@ text-decoration: underline;
 	}
 	.day{
 		font-size:1.2em;
+	}
+	.day-name{
+		font-size:1em;
 	}
 }
 @media only screen and (max-width:390px){

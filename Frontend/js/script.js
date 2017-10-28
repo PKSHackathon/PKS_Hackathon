@@ -17,5 +17,7 @@ function listenButtons(){
 
 
 function showActiv(){
-
+let dayNr = this.value;
+let list = document.querySelector(".day-" + dayNr);
+list.classList.toggle('hidden');
 }
