@@ -1,5 +1,4 @@
-from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Event
 
 def glowna(request):
@@ -8,10 +7,7 @@ def glowna(request):
     return render(request, 'glowna/index.html', context)
 
 def detail(request, Event_id):
-    try:
-        event = Event.objects.get(pk=Event_id)
-    except Event.DoesNotExist:
-        raise Http404("Nie ma takiego wydarzenia")
+    event = get_object_or_404(Event, pk=Event_id)
     return render(request, 'glowna/detail.html', {"event":event})
 
 

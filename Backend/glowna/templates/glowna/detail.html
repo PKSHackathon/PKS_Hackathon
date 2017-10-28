@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<meta charset="utf-8">
+{% load staticfiles %}
+<link rel="stylesheet" href = "{% static 'glowna/home.css' %}">
+<link rel="stylesheet" href = "{% static 'glowna/forms.css' %}">
+<link rel="stylesheet" href = "{% static 'glowna/event.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<div class="wrapper">
+		<div class="content-wrapper">
+			<div class="logo"><a href="../"><h1>NAZWA PROJEKTU</h1></a></div>
+			<div class="event-wrapper">
+				<div class="title"><h2>{{ event.nazwa }}</h2> </div>
+				<img src="{% static 'glowna/sowa.jpg' %}" class="event-image">
+				<div class="date">
+                    <p>{{ event.miejsce }}  </p>
+                    <p>{{ event.data }},  </p>
+                    <p>{{ event.godzina }} </p>
+				</div>
+				<div class="description">
+                    <p>{{ event.description }}</p>
+                </div>
+				<div class="add">
+					UWAGI: {{ event.uwagi }}
+				</div>
+				<div class="fb-link">
+					<a href="#">LINK: {{ event.link }}</a>
+				</div>
+				<div class="tags">
+					<p> {{ event.tags }} </p>
+				</div>
 
+
+				 </div>
+
+
+
+
+
+			</div>
+			</div>
+			
+	</div>
+<script src="js/script.js"></script>
 </body>
 </html>

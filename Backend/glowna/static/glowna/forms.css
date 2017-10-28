@@ -1,0 +1,81 @@
+.event-form{
+	margin-top: 5%;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	font-weight:200;
+	font-family: 'Raleway', sans-serif;
+}
+.event{
+	width:60%;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.event-input,.date-input{
+	background-color: #1ab188;
+	text-align: center;
+	margin-top:1%;
+	margin-bottom:1%;
+	width:100%;
+	font-size:1.5em;
+	padding:0.1em;
+	margin-left:1%;
+	margin-right:1%;
+	border-radius: 10px;
+	outline:none;
+	border:0px;
+	color:white;
+	
+}
+input{
+	font-weight:200;
+	font-family: 'Raleway', sans-serif;
+}
+input::placeholder
+{
+	font-weight:200;
+	outline:none;
+	color:white;
+}
+#description,#add{
+	font-weight:200;
+	height:3em;
+	padding:0;
+	font-family: 'Raleway', sans-serif;
+
+}
+input:focus,textarea:focus{
+	outline:none;
+}
+textarea::placeholder{
+	border-radius:10px;
+	color:white;
+}
+.date-input{
+width:15%;
+}
+.sub{
+	outline:none;
+	border:3px solid #1ab188;;
+	padding:0.2em;
+	width:5em;
+	font-size:1.5em;
+	margin-bottom:5%;
+	color:#1ab188;
+	background-color:white;
+	border-radius:35px;
+	transition: 0.2s all ease-in-out;
+}
+.sub:hover{
+	border-radius:5px;
+	cursor:pointer;
+	background-color: transparent;
+	color:white;
+	transition: 0.2s all ease-in-out;
+}
+.sub:focus{
+	outline:none;
+}
