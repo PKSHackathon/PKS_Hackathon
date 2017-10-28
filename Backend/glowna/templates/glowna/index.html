@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href = "css/home.css">
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'glowna/home.css' %}"/>
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
+
 </head>
 <body>
 	<div class = "wrapper">
+
+
+		<header class="top-wrapper">
+			<div class="logo">
+				<h1>NAZWA PROJEKTU </h1>
+			</div>
 		<nav class="navigation">
-        {% for event in all_events %}
-            <li><a href="/event/{{ event.id }}">{{ event.nazwa }}</a></li>
-        {% endfor %}
-
-
+			<ul class="menu_list">
+			<a href ="#">Wydarzenia </a>
+			<a href ="#">Dodaj własne wydarzenie! </a>
+			</ul>
 	    </nav>
+	 	</header>
 	    <div class=content>
+            {% for event in all_events %}
+                {% if event.data == lastdata%}
+                    <div class="day">{{ event.nazwa }}</div>
 
-
-
-
-
+                {% endif %}
+            {% endfor %}
 	    </div>
+	    <footer>
+	    	stopka
+	    </footer>
 	</div>
 <script src="js/script.js"></script>
 </body>
