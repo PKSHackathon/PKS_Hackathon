@@ -1,2 +1,1 @@
-# PKS_Hackathon
-Hackathon in Nysa project 2017
+Projekt zrealizowanych w ramach Hackathon Nysa 2017
