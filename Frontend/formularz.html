@@ -2,6 +2,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href = "style/home.css">
+<link rel="stylesheet" href = "style/forms.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -10,9 +11,28 @@
 		<div class="content-wrapper">
 			<div class="logo"><h1>NAZWA PROJEKTU</h1></div>
 			<nav class="navigation">
-				<a href="#">Wydarzenia</a>
+				<a href="index.html">Wydarzenia</a>
 				<a href="formularz.html">Dodaj własne wydarzenie!</a>
 			</nav>
+
+			</div>
+			<div class = "event-form">
+				<form class = "event">
+					<input id="title" class="event-input" type="text" placeholder="Tytuł wydarzenia">
+					<input id="place" class="event-input" type="text" placeholder="Miejsce">
+					<input id="day" class="date-input" type="number" min=0 max=0 placeholder="Dzień">
+					<input id="month" class="date-input" type="number" min="1" max="12" placeholder="Miesiąc">
+					<input id="year" class="date-input" type="number" min="2017" step="1" placeholder="Rok">
+					<input id="hours" class="date-input" type="number"  step="1" placeholder="Godzina">
+					<input id="min" class="date-input" type="number" min="0" max="50" step="10" placeholder="Minuta">
+					<input id="link" class="event-input" type="text" placeholder="Link do wydarzenia na facebooku">
+					<input id="tags" class="event-input" type="text" placeholder="#tagi">
+					<textarea id="description" class="event-input" type="text" placeholder="Opis wydarzenia"></textarea>
+					<textarea id="add" class="event-input" type="text" placeholder="Uwagi"></textarea>
+					<button type="submit" id="send" class ="sub"> WYŚLIJ </button> 
+
+
+
 
 			</div>
 		</div>
