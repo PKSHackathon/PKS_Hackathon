@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-{% load staticfiles %}
-<link rel="stylesheet" href = "{% static 'glowna/home.css' %}">
-<link rel="stylesheet" href = "{% static 'glowna/forms.css' %}">
-<link rel="stylesheet" href = "{% static 'glowna/event.css' %}">
+<link rel="stylesheet" href = "style/home.css">
+<link rel="stylesheet" href = "style/forms.css">
+<link rel="stylesheet" href = "style/event.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,26 +11,25 @@
 <body>
 	<div class="wrapper">
 		<div class="content-wrapper">
-			<div class="logo"><a href="../"><h1>NAZWA PROJEKTU</h1></a></div>
+			<div class="logo"><a href="index.html"><h1>NAZWA PROJEKTU</h1></a></div>
 			<div class="event-wrapper">
-				<div class="title"><h2>{{ event.nazwa }}</h2> </div>
-				<img src="{% static 'glowna/sowa.jpg' %}" class="event-image">
+				<div class="title"><h2>NAZWA WYDARZENIA</h2> </div>
+				<img src="style/sowa.jpg" class="event-image">
 				<div class="date">
-                    <p>{{ event.miejsce }}  </p>
-                    <p>{{ event.data }},  </p>
-                    <p>{{ event.godzina }} </p>
+				<p>ul. Wiejska 4a Kamiennik </p>
+				 <p> 11.11.2017r. 17.00 </p>
 				</div>
-				<div class="description">
-                    <p>{{ event.description }}</p>
-                </div>
+				<div class="description"> 
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+				</div>
 				<div class="add">
-					UWAGI: {{ event.uwagi }}
+					UWAGI: WSTĘP PŁATNY
 				</div>
 				<div class="fb-link">
-					<a href="#">LINK: {{ event.link }}</a>
+					<a href="#">JAKIŚ LINK </a>
 				</div>
 				<div class="tags">
-					<p> {{ event.tags }} </p>
+					<p> #kultura , #sport </p>
 				</div>
 
 

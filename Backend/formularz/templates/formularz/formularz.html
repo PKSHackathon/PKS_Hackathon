@@ -13,9 +13,9 @@
 <body>
 	<div class="wrapper">
 		<div class="content-wrapper">
-			<div class="logo"><a href="index.html"><h1>NAZWA PROJEKTU</h1></a></div>
+			<div class="logo"><a href="../event"><h1>NAZWA PROJEKTU</h1></a></div>
 			<nav class="navigation">
-				<a href="index.html">Wydarzenia</a>
+				<a href="../event">Wydarzenia</a>
 				<a href="formularz.html">Dodaj własne wydarzenie!</a>
 			</nav>
 
@@ -26,25 +26,22 @@
 			<div class = "event-form">
 				<form action="{% url 'add' %}" method="POST" class = "event">
 					{% csrf_token %}
-					<input id="title" name="title" class="event-input" type="text" placeholder="Tytuł wydarzenia">
-					<input id="place" name="place" class="event-input" type="text" placeholder="Miejsce">
-					<input id="day" name="day" class="date-input" type="number" min=0 max=0 placeholder="D.">
-					<input id="month" name="month" class="date-input" type="number" min="1" max="12" placeholder="M.">
-					<input id="years" name="years" class="date-input" type="number" min="2017" step="1" placeholder="R.">
-					<input id="hours" name="hours" class="date-input" type="number"  step="1" placeholder="Godz.">
-					<input id="min" name="min" class="date-input" type="number" min="0" max="50" step="10" placeholder="Min.">
-					<input id="link" name="link" class="event-input" type="text" placeholder="Link do wydarzenia na facebooku">
-					<input id="tags" name="tags" class="event-input" type="text" placeholder="#tagi">
-					<textarea id="description" name="description" class="event-input" type="text" placeholder="Opis wydarzenia"></textarea>
-					<textarea id="add" name="uwagi" class="event-input" type="text" placeholder="Uwagi"></textarea>
-					<input type="submit"  id="send" class ="sub" value="WYŚLIJ"> <span class="icon-ok"></span> </input>
-				</form>
-
-
-
+					<input id="title" name="title" class="event-input  val" type="text" required placeholder="Tytuł wydarzenia">
+					<input id="place" name="place" class="event-input  val" type="text" required placeholder="Miejsce">
+					<input id="day" name="day" class="date-input val"  type="number" min=1 max=0 placeholder="D.">
+					<input id="month" name="month" class="date-input val"  type="number" min="1" max="12" placeholder="M.">
+					<input id="year" name="years" class="date-input val"  type="number" min="2017" step="1" placeholder="R.">
+					<input id="hours" name="hours" class="date-input val"  type="number"  min="0" max="24" step="1" placeholder="Godz.">
+					<input id="min" name="min" class="date-input val"  type="number" min="0" max="59" step="1" placeholder="Min.">
+					<input id="link" name="link" class="event-input val " type="text" placeholder="Link do wydarzenia na facebooku">
+					<input id="tags" name="tags" class="event-input val " type="text" required placeholder="#tagi">
+					<textarea id="description" name="description" class="event-input val " type="text" required placeholder="Opis wydarzenia"></textarea>
+					<textarea id="add" name="uwagi" class="event-input val " type="text" placeholder="Uwagi"></textarea>
+					<button type="submit" id="send" class =" sub val"> <span class="icon-ok"></span> </button>
+                </form>
 			</div>
 		</div>
 	</div>
-<script src="js/script.js"></script>
+<script src="{% static 'formularz/form.js' %}"></script>
 </body>
 </html>

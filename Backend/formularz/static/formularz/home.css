@@ -100,7 +100,7 @@ cursor:pointer;
 }
 
 .day-name{
-	width:20%;
+	width:28%;
 	font-size:1.4em;
 	border:none;
 	color:white;
@@ -142,42 +142,53 @@ transition: 0.2s all ease-in-out;
 .hidden{
 	display:none;
 }
-
+/*Wielkości dla różych rozdzielczości*/
+@media only screen and (max-width: 975px){
+	.day-name{
+		font-size:1.2em;
+	}
+@media only screen and (max-width: 840px){
+	.day-name{
+		font-size:1.0em;
+	}
+@media only screen and (max-width: 703px){
+	.day-name{
+		font-size:0.8em;
+	}
+@media only screen and (max-width: 680px){
+	.navigation a{
+		font-size:0.6em;
+	}
+	.navigation a{
+		font-size:0.8em;
+	}	
+@media only screen and (max-width: 560px){
+	.day-name{
+		font-size:0.6em;}
+	.navigation a{
+		font-size:0.6em;
+	}
+	}	
 
 @media only screen and (max-width: 480px){
 	body{
-		font-size:1.5em;
+		font-size:0.6em;
 	}
 	.wrapper{
 		
 	}
 	.logo h1{
-		font-size:1.8em;
+		font-size:2.9em;
 		margin:0;
 	}
 	.navigation a{
-		font-size:0.9em;
+		font-size:1.4em;
 	}
 	.day{
 		font-size:1.2em;
 	}
 	.day-name{
 		font-size:1em;
-	}
-}
-@media only screen and (max-width:390px){
-	.navigation a{
-		font-size:0.7em;
-	}
-
-	.logo h1{
-		font-size:1.5em;
-	}
-
-
-}
-@media only screen and (max-width:330px){
-	.logo h1{
-		font-size:1.3em;
+		min-width: 70%
 	}
 }
