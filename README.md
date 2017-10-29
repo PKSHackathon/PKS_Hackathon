@@ -7,9 +7,3 @@ Portal przedstawia ciekawe wydarzenia w Nysie i okolicach oraz pozwala na dodawa
 Aplikacja działa w formie strony internetowej. Oparta jest na serwerze Django, frontend został napisany w czystym HTML+CSS oraz JavaScripcie.
 
 Dane na temat wydarzeń gromadzone są w bazie SQL.
-
-
-Autorzy:
-Karol Gruszka
-Kacper Jagieła
-Daniel Opyd
