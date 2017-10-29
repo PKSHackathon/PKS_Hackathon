@@ -16,7 +16,9 @@
 }
 .event-input,.date-input{
 	font-weight: 200;
-	background-color: #1ab188;
+	/*background-color: #1ab188;*/
+	background-color: #27496d;
+	/*background-color: rgba(255, 255, 255, 0.4);*/
 	text-align: center;
 	margin-top:1%;
 	margin-bottom:1%;
@@ -35,7 +37,7 @@
 	border:3px solid #930112;
 }
 .event-input:valid, .date-input:valid{
-	border:3px solid #0e3a10;
+	border:3px solid #14a81b;
 }
 
 input{
@@ -68,12 +70,12 @@ width:15%;
 }
 .sub{
 	outline:none;
-	border:3px solid #1ab188;;
+	border:3px solid #27496d;
 	padding:0.2em;
 	width:5em;
 	font-size:1.5em;
 	margin-bottom:5%;
-	color:#1ab188;
+	color:#27496d;
 	background-color:white;
 	border-radius:35px;
 	transition: 0.2s all ease-in-out;
