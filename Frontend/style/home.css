@@ -68,6 +68,11 @@ a{
 button:focus{
 	outline: 0;
 }
+.search{
+	width:30%;
+	border:2px solid white;
+	border-radius:20px;
+}
 .content{
 	width:100%;
 	display: flex;

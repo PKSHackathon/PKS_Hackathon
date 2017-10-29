@@ -1,43 +1,38 @@
-let numberOfDays = getNumberOfDays();
-console.log(numberOfDays);
-window.addEventListener('DOMContentLoaded',function(){
-	listenButtons();
-	validateDays(numberOfDays);
+let numberOfDays = getNumberOfDays();			//Zapoczątkowanie wartości w formie
+window.addEventListener('DOMContentLoaded',function(){			//Załadowanie skryptu po załadowaniu elementów DOM
+	listenButtons();			//Dodanie event listenerów do przycisków
+	validateDays(numberOfDays);		//Ustawienie maksymalnego dnia w "pokrętle" do wybierania dnia wydarzenia adekwatnie do aktualnego miesiąca
 });
 
-function validateDays(days,reset){
-	let day = document.querySelector('#day');
+function validateDays(days,reset){			
+	let day = document.querySelector('#day'); // ^^
 	day.max = days;
 	if(reset === true){
-		day.value = "1";
+		day.value = "1";		//Ustawienie wartości dni na 1 aby zapobiec pozostaniu z poprzedniego miesiąca np. 31, gdy miesiąc ma 30 dni.
 	}
 }
 
 function validateDate(){
-	let date = new Date();
+	let date = new Date();		//Sprawdzanie aktualnego roku i miesiąca
 	let year = date.getFullYear();
 	let monthForm = document.querySelector('#month');
 	let month = monthForm.value;
-	let days = daysInMonth(month,year);
-	validateDays(days,true);
+	let days = daysInMonth(month,year);		//Zwraca ilość dni w miesiącu
+	validateDays(days,true);			//Ustawienie maksymalnego dnia w "pokrętle" do wybierania dnia wydarzenia adekwatnie do aktualnego miesiąca
 
 	
 }
 
-function listenButtons(){
+function listenButtons(){			//Dodanie event listenerów do przycisków
 	
 	let forms = document.getElementsByClassName("val");
-	console.log(forms);
-	for(x = 0; x < forms.length ; x++){
-		forms[x].addEventListener('click',validateForm);
-	}
-	let month = document.querySelector('#month');
+	let month = document.querySelector('#month');			//Przy kliknięciu aktualizacja miesiąca i jego  liczby dni
 	month.addEventListener('click',validateDate,false);
 	
 }
 
 function daysInMonth(month,year) {
-    return new Date(year, month, 0).getDate();
+    return new Date(year, month, 0).getDate();	//Zwraca liczbę dni w miesiącu danego roku
 }
 function getNumberOfDays() {
 	let date = new Date();
@@ -50,7 +45,7 @@ initializeForm(day,month,year,hour,min);
 return daysInMonth(month,year);
 }
 
-function initializeForm(day,month,year,hour,min)
+function initializeForm(day,month,year,hour,min)			//Tworzenie forma, nadawanie domyślnych wartości.
 {
 	let dayForm = document.querySelector('#day');
 	let monthForm = document.querySelector('#month');
@@ -60,25 +55,20 @@ function initializeForm(day,month,year,hour,min)
 	dayForm.value = day;
 	monthForm.value = month;
 	yearForm.value = year;
-	if(hour === 0){
+	if(hour === 0){					//Jeżeli jest 12 w nocy godzina jest ustawiana na 00, aby ładniej wyglądało
 		hourForm.value = "00";
 	}
 	else
 	{
-		hourForm.value = hour;
+		hourForm.value = hour;		//Ustawianie wartości godziny na aktualną godzine
 	}
 	if(min === 0)
 	{
-		minForm.value = "00";
+		minForm.value = "00";	//To samo co z godziną
 	}
 	else
 	{
-		minForm.value = min;
+		minForm.value = min;	//Ustawianie wartości minuty na aktualną minutę
 	}
 }
 
-function validateForm(){
-	if(this.value == ""){
-		console.log('puste')
-	}
-}
