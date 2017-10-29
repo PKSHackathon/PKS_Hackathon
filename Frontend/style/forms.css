@@ -15,6 +15,7 @@
 	align-items: center;
 }
 .event-input,.date-input{
+	font-weight: 200;
 	background-color: #1ab188;
 	text-align: center;
 	margin-top:1%;
@@ -30,6 +31,13 @@
 	color:white;
 	
 }
+.event-input:invalid, .date-input:invalid{
+	border:3px solid #930112;
+}
+.event-input:valid, .date-input:valid{
+	border:3px solid #0e3a10;
+}
+
 input{
 	font-weight:200;
 	font-family: 'Raleway', sans-serif;
@@ -51,6 +59,7 @@ input:focus,textarea:focus{
 	outline:none;
 }
 textarea::placeholder{
+	font-weight: 200;
 	border-radius:10px;
 	color:white;
 }

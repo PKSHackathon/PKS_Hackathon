@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href = "style/home.css">
+<link rel="stylesheet" href = "style/forms.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,400" rel="stylesheet">
+<link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/input_control.min.css">
+<link rel="stylesheet" href="css/fontello.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content-wrapper">
+			<div class="logo"><a href="index.html"><h1>NAZWA PROJEKTU</h1></a></div>
+			<nav class="navigation">
+				<a href="index.html">Wydarzenia</a>
+				<a href="formularz.html">Dodaj własne wydarzenie!</a>
+			</nav>
+
+			</div>
+			<div class = "event-form">
+				<form class = "event">
+					<input id="title" class="event-input  val" type="text" required placeholder="Tytuł wydarzenia">
+					<input id="place" class="event-input  val" type="text" required placeholder="Miejsce">
+					<input id="day" class="date-input val"  type="number" min=1 max=0 placeholder="D.">
+					<input id="month" class="date-input val"  type="number" min="1" max="12" placeholder="M.">
+					<input id="year" class="date-input val"  type="number" min="2017" step="1" placeholder="R.">
+					<input id="hours" class="date-input val"  type="number"  min="0" max="24" step="1" placeholder="Godz.">
+					<input id="min" class="date-input val"  type="number" min="0" max="59" step="1" placeholder="Min.">
+					<input id="link" class="event-input val " type="text" placeholder="Link do wydarzenia na facebooku">
+					<input id="tags" class="event-input val " type="text" required placeholder="#tagi">
+					<textarea id="description" class="event-input val " type="text" required placeholder="Opis wydarzenia"></textarea>
+					<textarea id="add" class="event-input val " type="text" placeholder="Uwagi"></textarea>
+					<button type="submit" id="send" class =" sub val"> <span class="icon-ok"></span> </button> 
+
+
+
+
+			</div>
+		</div>
+	</div>
+<script src="js/form.js"></script>
+</body>
+</html>
